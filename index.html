@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=320, initial-scale=1.0" />
+
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css" />
+      <script src="app.js" defer></script>
+   </head>
+   <body>
+      <header>
+         <h1>Meta Tags and html formatting</h1>
+      </header>
+
+      <main>
+         <!-- The pre tag -->
+         <section class="pre">
+            <pre>
+   THE TEXT INSIDE A PRE ELEMENT
+
+         MAINTAINS LINE BREAKS    AND SPACES
+
+   AND IS DISPLAYED IN A FIXED-WIDTH FONT (USUALLY COURIER)
+
+   But it is important to provide an alternate 
+   description of any images or diagrams created 
+   using pre formatted        text
+
+            </pre>
+
+            <!-- When using pre to create diagrams or images it is important to include descriptions
+                using aria roles and aria labelledby in combination with figure and figcaption as we cannot simply have an alt
+               like we do on images -->
+            <figure role="img" class="ascii-fig" aria-labelledby="pikachu-caption">
+               <pre>
+            ⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⣠⣤⣶⣶ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⢰⣿⣿⣿⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣀⣀⣾⣿⣿⣿⣿ 
+            ⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿ 
+            ⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿ 
+            ⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿ 
+            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
+            </pre
+               >
+               <figcaption id="pikachu-caption">
+                  A surprised Pikachu made with ascii
+               </figcaption>
+            </figure>
+         </section>
+         <hr />
+
+         <figure class="img-fig">
+            <img
+               src="./images/dalle-vader-unicorn.png"
+               alt="Darth vader riding a unicorn"
+            />
+            <figcaption id="vader-uni-capt">
+               A Dall-E artwork of Darth Vader riding i unicorn with a
+               <strong>huge</strong> horn
+            </figcaption>
+         </figure>
+         <hr />
+
+         <section class="tags">
+            <h2>Different tags</h2>
+            <h3>KBD</h3>
+            <p>
+               The kbd tag is used to define keyboard input, for example
+               <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text <br />
+               and is displayed in the browsers default monospace font
+            </p>
+            <p>
+               it is possible to achieve a richer effect by using css <br />
+               <kbd class="better-kbd">Ctrl</kbd>
+               + <kbd class="better-kbd">V</kbd> to paste
+            </p>
+            <hr />
+
+            <h3>CODE</h3>
+            <p>
+               the code tag is used to define a piece of computer code <br />
+               for example: The <code>button</code> tag defines a clickable button
+               <br />
+               the content is also displayed in the browsers default monospace font
+            </p>
+
+            <p>
+               We can also use css here to achieve a better effect <br />
+               The <code class="better-code">button</code> tag defines a clickable
+               button
+            </p>
+            <hr />
+
+            <h3>VAR</h3>
+            <p>
+               The var tag is used to define a variable in programming or a
+               mathematical expression, and the content is usually displayed in
+               italic, for example: <br />
+               <br />
+               The area of a triangle is: 1/2 * <var>b</var> * <var>h</var>, where
+               <var>b</var> is the base, and <var>h</var> is the vertical height
+            </p>
+            <hr />
+            <h3>SAMP</h3>
+            <p>
+               The samp tag is used to define sample output from a computer program.
+               <br />the content inside is displayed in the browsers default
+               monospace font
+            </p>
+
+            <p>
+               For example: <br /><br />
+               <samp>File not found.</samp><br />
+               <samp>Press F1 to continue</samp>
+            </p>
+            <hr />
+            <h3>
+               <strong style="color: red">DO NOT</strong> use these tags to display
+               normal text!
+            </h3>
+            <figure class="ascii-fig" role="img" aria-labelledby="no-cat">
+               <pre style="font-size: 1.2rem">
+         ⢰⣷⢶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠶⢶⣆
+         ⢺⣿⣶⡎⠙⠿⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠞⠁⠀⠀⠠⡟
+         ⠈⣿⣿⣷⣄⠄⠈⢻⣷⣦⣤⡄⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀⠀⠀⣼⠁
+         ⠀⢸⣿⣿⣿⣠⣤⣤⣿⡟⠉⠀⠀⠀⠀⠀⠀⠈⠙⠛⠿⠷⣶⣶⣄⠀⠀⣰⠇⠀
+         ⠀⠀⢻⣿⡟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣃⢰⠏⠀⠀
+         ⠀⠀⣼⣿⠇⠀⢠⡀⠀⠀⠀⣀⣴⡇⠀⠀⢀⣴⣤⠀⠀⠀⠀⠀⠈⣿⡿⠀⠀⠀
+         ⠀⠀⠉⠀⣀⣠⣾⣿⣷⣴⣿⣿⣿⡿⠀⠀⢿⣿⣿⣷⣶⣤⡀⠀⠀⠈⠃⠀⠀⠀
+         ⠀⠀⠀⠀⢿⣿⣏⠉⢹⠛⢿⣿⣿⠁⠀⠀⢸⣿⡿⢿⠿⢿⣷⠀⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠈⢿⣿⣦⣤⣤⣿⣿⠇⠀⠀⠀⠸⣿⣄⣘⣀⣸⣿⠂⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠀⠈⠛⠻⡿⠿⣿⠟⠀⠀⠀⠀⠀⠹⣿⣿⣿⡿⠿⠀⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠓⠦⣀⠔⠊⠀⠘⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠤⠾⠤⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠀⠀⠀⠀⠀⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠀⠀⠠⢤⣤⣄⠀⠠⢤⡤⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠀⠀⠀⠀⡟⢿⣧⡀⠀⡇⠀⢀⣤⠴⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+         ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠻⣿⣦⡇⠀⣿⣿⠀⠈⣿⡇
+         ⠀⠀⠀⠀⠀⠀⠀⣴⠧⠀⠀⠘⢿⡇⠀⠙⢿⣀⣸⠟⠁⠰⣿⠆⠀⠀⠀⠀
+            </pre
+               >
+               <figcaption id="no-cat">
+                  An angry cat saying no, made with ascii
+               </figcaption>
+            </figure>
+         </section>
+         <section>
+            <p><b>Bold text with no importance</b></p>
+            <p><strong>Bold text with importance</strong></p>
+            <p><i>Italic text with no emphasis</i></p>
+            <p><em>Italic text with emphasis</em></p>
+            <p><mark>This text is marked</mark></p>
+            <p><small>This text is smoll</small></p>
+            <p><del>This is deleted text</del></p>
+         </section>
+      </main>
+   </body>
+</html>
